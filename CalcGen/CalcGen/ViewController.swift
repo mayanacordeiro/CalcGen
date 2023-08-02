@@ -8,12 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var labelOne: UILabel!
+    @IBOutlet weak var labelTwo: UILabel!
+    @IBOutlet weak var textFieldOne: UITextField!
+    @IBOutlet weak var textFieldTwo: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func infoButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func calculateButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func segmentedControl(_ sender: UISegmentedControl) {
+    }
+    
+    
 }
 
