@@ -133,7 +133,7 @@
                     <connections>
                         <outlet property="labelOne" destination="bez-uv-ALd" id="Fju-qa-E9L"/>
                         <outlet property="labelTwo" destination="Eyc-jU-fCL" id="cpb-jd-Tk4"/>
-                        <outlet property="sgementedControl" destination="tka-eL-aug" id="wzn-LP-t5W"/>
+                        <outlet property="segmentedControl" destination="tka-eL-aug" id="wzn-LP-t5W"/>
                         <outlet property="textFieldOne" destination="a5D-R6-kt0" id="zIc-mX-pOb"/>
                         <outlet property="textFieldTwo" destination="Aul-fu-TEZ" id="y6q-e9-6hy"/>
                     </connections>
