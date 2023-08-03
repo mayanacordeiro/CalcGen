@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textFieldOne: UITextField!
     @IBOutlet weak var textFieldTwo: UITextField!
     
+    @IBOutlet weak var sgementedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,6 +30,9 @@ class ViewController: UIViewController {
     
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
     }
+    
+    
+    
     
     
 }
