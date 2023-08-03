@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
     @IBAction func infoButton(_ sender: UIButton) {
     }
     
@@ -30,7 +30,17 @@ class ViewController: UIViewController {
     
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
     }
-    
+//
+//    func segmentedControl() {
+//        if segmentedControl.selectedSegmentIndex == 0 {
+//            labelOne.text = "Número de homozigotos"
+//            labelTwo.text = "Número de heterozigotos"
+//        } else {
+//            labelOne.text = "Total de indivíduos com genótipo"
+//            labelTwo.text = "Total de indivíduos da população"
+//        }
+//
+//    }
     
     
     
