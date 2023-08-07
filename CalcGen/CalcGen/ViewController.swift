@@ -11,8 +11,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var labelOne: UILabel!
     @IBOutlet weak var labelTwo: UILabel!
+    @IBOutlet weak var labelThree: UILabel!
+    @IBOutlet weak var labelResult: UILabel!
+    
     @IBOutlet weak var textFieldOne: UITextField!
     @IBOutlet weak var textFieldTwo: UITextField!
+    
+    @IBOutlet weak var textFieldThree: UITextField!
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -31,6 +37,9 @@ class ViewController: UIViewController {
     
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
         segmentedControlLabel()
+    }
+    
+    @IBAction func clearButton(_ sender: Any) {
     }
     
 
