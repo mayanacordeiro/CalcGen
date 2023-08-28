@@ -21,10 +21,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var calculateButton: UIButton!
+    
+    @IBOutlet weak var clearButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         segmentedControlLabel()
+        setupConstraints()
+        
+                
     }
     
     
@@ -32,7 +39,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateButton(_ sender: UIButton) {
-        calculateFG()
+        if segmentedControl.selectedSegmentIndex == 0 {
+            
+            calculateFA()
+            showResult(de: calculateFA())
+            
+        } else {
+            
+            calculateFG()
+            showResult(de: calculateFG())
+            
+        }
+        
+        calculateButton.isHidden = true
     }
     
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
@@ -40,16 +59,29 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearButton(_ sender: Any) {
+        
+        clearButton.isHidden = true
+        labelResult.isHidden = true
+        calculateButton.isHidden = false
+        
+        
     }
     
 
     func segmentedControlLabel() {
         if segmentedControl.selectedSegmentIndex == 0 {
+            labelThree.isHidden = false
+            textFieldThree.isHidden = false
             labelOne.text = "Número de homozigotos"
             labelTwo.text = "Número de heterozigotos"
+            labelThree.text = "Total de indivíduos da população"
+            
+            
         } else {
             labelOne.text = "Total de indivíduos com genótipo"
             labelTwo.text = "Total de indivíduos da população"
+            labelThree.isHidden = true
+            textFieldThree.isHidden = true
         }
 
     }
@@ -69,6 +101,66 @@ class ViewController: UIViewController {
         
         return FG
     }
+    
+    func calculateFA() -> Float {
+        let inputTextFieldOne = textFieldOne.text!
+        let inputOneFloat = Float(inputTextFieldOne)!
+        
+        let inputTextFieldTwo = textFieldTwo.text!
+        let inputTwoFloat = Float(inputTextFieldTwo)!
+        
+        let inputTextFieldThree = textFieldThree.text!
+        let inputThreeFloat = Float(inputTextFieldThree)!
+        
+        let FA = ((inputOneFloat * 2) + inputTwoFloat) / (inputThreeFloat * 2)
+        
+        print(FA)
+        
+        return FA
+        
+    }
+    
+    func showResult(de valor: Float) {
+        //exibe resultado na label
+        labelResult.isHidden = false
+        labelResult.text = "O valor da FG é \(valor)"
+        
+        calculateButton.isHidden = false
+        clearButton.isHidden = false
+    }
+    
+    func setupConstraints() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            labelResult.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([labelResult.topAnchor.constraint(equalTo: textFieldThree.bottomAnchor, constant: 48)
+                                        ])
+
+            clearButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([clearButton.topAnchor.constraint(equalTo: labelResult.bottomAnchor, constant: 24)
+                                        ])
+            
+            calculateButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([calculateButton.topAnchor.constraint(equalTo: textFieldThree.bottomAnchor, constant: 32)
+                                         ])
+
+        } else {
+            labelResult.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([labelResult.topAnchor.constraint(equalTo: textFieldTwo.bottomAnchor, constant: 48)
+                                        ])
+
+            clearButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([clearButton.topAnchor.constraint(equalTo: labelResult.bottomAnchor, constant: 24)
+                                        ])
+        
+            calculateButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([calculateButton.topAnchor.constraint(equalTo: textFieldTwo.bottomAnchor, constant: 32)
+                                        ])
+            
+        }
+
+    }
+    
+    
     
     
 }
