@@ -78,6 +78,7 @@ class ViewController: UIViewController {
         self.textFieldTwo.text = nil
         self.textFieldThree.text = nil
         
+        calculateButton.isEnabled = false
         
     }
     
@@ -192,6 +193,7 @@ class ViewController: UIViewController {
             }
         }
     }
+
     
     
     
