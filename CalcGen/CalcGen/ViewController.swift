@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         calculateButton.isEnabled = false
         calculateButton.setTitleColor(.white.withAlphaComponent(0.95), for: .disabled)
         calculateButton.setTitleColor(.white, for: .normal)
+        calculateButton.layer.cornerRadius = 10
+        clearButton.layer.cornerRadius = 10
     }
     
     
@@ -103,13 +105,13 @@ class ViewController: UIViewController {
     
     func calculateFA() -> String {
         let inputTextFieldOne = textFieldOne.text!
-        let inputOneFloat = Float(inputTextFieldOne)!
+        let inputOneFloat = Float(inputTextFieldOne) ?? 0.0
         
         let inputTextFieldTwo = textFieldTwo.text!
-        let inputTwoFloat = Float(inputTextFieldTwo)!
+        let inputTwoFloat = Float(inputTextFieldTwo) ?? 0.0
         
         let inputTextFieldThree = textFieldThree.text!
-        let inputThreeFloat = Float(inputTextFieldThree)!
+        let inputThreeFloat = Float(inputTextFieldThree) ?? 0.0
         
         let FA = ((inputOneFloat * 2) + inputTwoFloat) / (inputThreeFloat * 2)
         let FAString = String(format: "%.5f", FA)
@@ -122,15 +124,14 @@ class ViewController: UIViewController {
     
     func calculateFG() -> String {
         let inputTextFieldOne = textFieldOne.text!
-        let inputOneFloat = Float(inputTextFieldOne)!
+        let inputOneFloat = Float(inputTextFieldOne) ?? 0.0
         
         let inputTextFieldTwo = textFieldTwo.text!
-        let inputTwoFloat = Float(inputTextFieldTwo)!
+        let inputTwoFloat = Float(inputTextFieldTwo) ?? 0.0
         
         let FG = inputOneFloat / inputTwoFloat
-//        let FGRounded = round(FG * 100) / 100.00000
         let FGString = String(format: "%.5f", FG)
-        //print(FG)
+      
         
         return FGString
     }
