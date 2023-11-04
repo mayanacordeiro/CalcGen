@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -71,6 +73,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="infoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NU7-mi-mfd"/>
+                                    <segue destination="bRB-47-i4V" kind="presentation" identifier="infoSegue" id="Wv0-fG-naF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bez-uv-ALd">
@@ -194,11 +197,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="-277" y="37"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="RcW-qk-wm5">
+            <objects>
+                <viewController id="bRB-47-i4V" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sNA-d5-X5q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atenção" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHK-oZ-6Ms">
+                                <rect key="frame" x="156" y="64" width="81" height="24.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Os resultados da calculadora serão arredondados para até 5 casas decimais quando necessário." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du5-Kt-fqJ">
+                                <rect key="frame" x="16" y="167.33333333333334" width="361" height="65.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jtS-iE-7cC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jtS-iE-7cC" firstAttribute="trailing" secondItem="du5-Kt-fqJ" secondAttribute="trailing" constant="16" id="CoJ-T7-QS7"/>
+                            <constraint firstItem="du5-Kt-fqJ" firstAttribute="leading" secondItem="jtS-iE-7cC" secondAttribute="leading" constant="16" id="Q4f-PA-hrN"/>
+                            <constraint firstItem="du5-Kt-fqJ" firstAttribute="top" secondItem="YHK-oZ-6Ms" secondAttribute="bottom" constant="79" id="kOb-jx-RS7"/>
+                            <constraint firstItem="YHK-oZ-6Ms" firstAttribute="centerX" secondItem="sNA-d5-X5q" secondAttribute="centerX" id="lmv-LH-YMS"/>
+                            <constraint firstItem="YHK-oZ-6Ms" firstAttribute="top" secondItem="jtS-iE-7cC" secondAttribute="top" constant="64" id="pV9-C4-ZZO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxm-h6-5lG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="37"/>
         </scene>
     </scenes>
     <resources>
         <image name="NotebookBG" width="563" height="959"/>
-        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
+        <image name="questionmark.circle" catalog="system" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

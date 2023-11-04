@@ -43,12 +43,16 @@ class ViewController: UIViewController {
     
     
     @IBAction func infoButton(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Atenção", message: "Os resultados da calculadora serão arredondados para até 5 casas decimais quando necessário. ", preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default))
-        
-        self.present(alert,animated: true)
+        func prepare(for segue: UIStoryboardSegue, sender: Any?){
+            if segue.identifier == "infoSegue" {
+                let proximaVC = segue.destination as? InfoViewController
+                
+            }
+            
+        }
     }
+    
     
     @IBAction func calculateButton(_ sender: UIButton) {
         if segmentedControl.selectedSegmentIndex == 0 {
@@ -161,20 +165,6 @@ class ViewController: UIViewController {
                                          ])
 
         }
-//        else {
-//            labelResult.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([labelResult.topAnchor.constraint(equalTo: textFieldTwo.bottomAnchor, constant: 48)
-//                                        ])
-//
-//            clearButton.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([clearButton.topAnchor.constraint(equalTo: labelResult.bottomAnchor, constant: 24)
-//                                        ])
-//        
-//            calculateButton.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([calculateButton.topAnchor.constraint(equalTo: textFieldTwo.bottomAnchor, constant: 32)
-//                                        ])
-//            
-//        }
 
     }
     

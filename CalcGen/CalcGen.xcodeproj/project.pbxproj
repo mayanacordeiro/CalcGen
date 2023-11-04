@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC09ED5E2AF6882200955037 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09ED5D2AF6882200955037 /* InfoViewController.swift */; };
 		FC91E1A52A63456C001AB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91E1A42A63456C001AB3F2 /* AppDelegate.swift */; };
 		FC91E1A72A63456C001AB3F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91E1A62A63456C001AB3F2 /* SceneDelegate.swift */; };
 		FC91E1A92A63456C001AB3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91E1A82A63456C001AB3F2 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC09ED5D2AF6882200955037 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		FC91E1A12A63456C001AB3F2 /* CalcGen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcGen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC91E1A42A63456C001AB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC91E1A62A63456C001AB3F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				FC91E1A62A63456C001AB3F2 /* SceneDelegate.swift */,
 				FC91E1A82A63456C001AB3F2 /* ViewController.swift */,
 				FC91E1AA2A63456C001AB3F2 /* Main.storyboard */,
+				FC09ED5D2AF6882200955037 /* InfoViewController.swift */,
 				FC91E1AD2A63456D001AB3F2 /* Assets.xcassets */,
 				FC91E1AF2A63456D001AB3F2 /* LaunchScreen.storyboard */,
 				FC91E1B22A63456D001AB3F2 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				FC91E1A92A63456C001AB3F2 /* ViewController.swift in Sources */,
 				FC91E1A52A63456C001AB3F2 /* AppDelegate.swift in Sources */,
+				FC09ED5E2AF6882200955037 /* InfoViewController.swift in Sources */,
 				FC91E1A72A63456C001AB3F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
